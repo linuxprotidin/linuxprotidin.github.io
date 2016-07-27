@@ -2,5 +2,9 @@
 layout: default
 ---
 <div class="post-content">
+  {% if img %}
+  <div class="post-hero-wrapper">
+    <img alt="" src="{{ img }}" class="post-hero" />
+  </div>
   {{ content | markdownify }}
 </div>
