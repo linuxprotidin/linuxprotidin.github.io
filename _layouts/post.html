@@ -1,11 +1,13 @@
 ---
 layout: default
 ---
-<div class="post-content">
+<div class="post-content w3-card-4">
   {% if page.img %}
   <div class="post-hero-wrapper">
     <img alt="" src="{{ page.img }}" class="post-hero" />
   </div>
   {% endif %}
-  {{ content | markdownify }}
+  <div class="w3-container">
+    {{ content | markdownify }}
+  </div>
 </div>
