@@ -4,12 +4,11 @@
   </li>
   {% for page in site.pages %} 
   <li><a href="{{ site.url }}{{ page.url }}" class="w3-padding-large w3-white">
-    {% if page.title == "Home" %}
-      {{ site.title }}
+      {% if page.title == "Home" %}
+    {{ site.title }}
     {% else %}
-    {{ page.title }}
+    {{ page.title }} &middot; {{ site.title }}
     {% endif %}</a></li>
-  {% endfor %}
 </ul>
 
 <!-- Navbar on small screens -->
@@ -17,11 +16,11 @@
   <ul class="w3-navbar w3-left-align w3-large w3-black">
   {% for page in site.pages %} 
   <li><a href="{{ site.url }}{{ page.url }}" class="w3-padding-large w3-white">
-    {% if page.title == "Home" %}
-      {{ site.title }}
-    {% else %}
-    {{ page.title }}
-    {% endif %}</a></li>
+      {% if page.title == "Home" %}
+  {{ site.title }}
+  {% else %}
+  {{ page.title }} &middot; {{ site.title }}
+  {% endif %}</a></li>
   {% endfor %}
   </ul>
 </div>
