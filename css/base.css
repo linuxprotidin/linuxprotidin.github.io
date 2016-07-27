@@ -1,6 +1,11 @@
 body,h1,h2,h3,h4,h5,h6 {
     font-family: "Noto Sans Bengali UI", "Lato", sans-serif
 }
+
+a {
+    text-decoration: none !important;
+}
+
 .w3-navbar,h1,button {
     font-family: "Noto Sans Bengali UI", "Montserrat", sans-serif
 }
@@ -13,4 +18,33 @@ body,h1,h2,h3,h4,h5,h6 {
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 10px;
+}
+
+.post-title {
+    text-decoration: none;
+}
+
+.post-title:hover {
+    color: #fe2020;
+}
+
+.post-content {
+    font-size: 18px;
+}
+
+.post-date {
+    padding: 5px;
+    background-color: #ff1919;
+    color: white;
+}
+
+.home-hero-wrapper {
+    width: 100%;
+    max-height: 40vh;
+    overflow: hidden;
+}
+
+.home-hero {
+    width: 100%;
+    height: auto;
 }
