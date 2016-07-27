@@ -23,3 +23,20 @@ title: Home
   </div>
 </div>
 {% endfor %}
+
+<div class="pagination w3-col w3-btn-bar w3-border w3-show-inline-block w3-card-4">
+  {% if paginator.next_page %}
+  <btn class="pagination-item older w3-btn w3-col-6" style="width: 50%;" href="/page{{paginator.next_page}}">পূর্ববর্তী</btn>
+  {% else %}
+  <btn class="pagination-item older w3-btn w3-col-6 w3-disabled" style="width: 50%;">পূর্ববতী</btn>
+  {% endif %}
+  {% if paginator.previous_page %}
+  {% if paginator.page == 2 %}
+  <btn class="pagination-item newer w3-btn" style="width: 50%;" href="/">পরবর্তী</btn>
+  {% else %}
+  <btn class="pagination-item newer w3-btn" style="width: 50%;" href="/page{{paginator.previous_page}}">পরবর্তী</btn>
+  {% endif %}
+  {% else %}
+  <btn class="pagination-item newer w3-btn w3-disabled" style="width: 50%;">পরবর্তী</btn>
+  {% endif %}
+</div>
