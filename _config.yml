@@ -1,0 +1,11 @@
+markdown: kramdown
+kramdown:
+  hard_wrap: true
+url: https://linuxprotidin.github.io
+title: লিনাক্স প্রতিদিন
+timezone: Asia/Dhaka
+paginate: 10
+permalink: date
+excerpt_separator: <!--more-->
+gems: [jekyll-paginate]
+highlighter: rouge

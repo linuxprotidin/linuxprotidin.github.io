@@ -1,0 +1,27 @@
+<ul class="w3-navbar w3-red w3-card-2 w3-top w3-left-align w3-large">
+  <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+    <a class="w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+  </li>
+  {% for page in site.pages %} 
+  <li><a href="{{ site.url }}{{ page.url }}" class="w3-padding-large w3-white">
+    {% if page.title == "Home" %}
+      {{ site.title }}
+    {% else %}
+    {{ page.title }}
+    {% endif %}</a></li>
+  {% endfor %}
+</ul>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:51px">
+  <ul class="w3-navbar w3-left-align w3-large w3-black">
+  {% for page in site.pages %} 
+  <li><a href="{{ site.url }}{{ page.url }}" class="w3-padding-large w3-white">
+    {% if page.title == "Home" %}
+      {{ site.title }}
+    {% else %}
+    {{ page.title }}
+    {% endif %}</a></li>
+  {% endfor %}
+  </ul>
+</div>

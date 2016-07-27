@@ -1,0 +1,15 @@
+body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Noto Sans Bengali UI", "Lato", sans-serif
+}
+.w3-navbar,h1,button {
+    font-family: "Noto Sans Bengali UI", "Montserrat", sans-serif
+}
+
+.fa-anchor,.fa-coffee {
+    font-size:200px
+}
+
+.post {
+    margin-bottom: 10px;
+    padding: 10px;
+}
