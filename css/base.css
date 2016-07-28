@@ -61,3 +61,7 @@ a {
 .post-content {
     margin-top: 10px;
 }
+
+.highlighter-rouge {
+    background-color: #e6e6e6;
+}
