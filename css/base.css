@@ -64,4 +64,6 @@ a {
 
 .highlighter-rouge {
     background-color: #e6e6e6;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
 }
