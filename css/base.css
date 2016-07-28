@@ -25,7 +25,7 @@ a {
 }
 
 .post-title:hover {
-    color: #fe2020;
+    color: #f44336;
 }
 
 .post-content {
@@ -34,7 +34,7 @@ a {
 
 .post-date {
     padding: 5px;
-    background-color: #ff1919;
+    background-color: #f44336;
     color: white;
 }
 
