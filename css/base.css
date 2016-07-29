@@ -29,7 +29,8 @@ a {
 }
 
 .post-content {
-    font-size: 18px;
+    font-size: 20px;
+    margin-top: 10px;
 }
 
 .post-date {
@@ -58,12 +59,36 @@ a {
     height: auto;
 }
 
-.post-content {
-    margin-top: 10px;
-}
-
 .highlighter-rouge {
     background-color: #e6e6e6;
     border: 1px solid #e6e6e6;
     border-radius: 3px;
+}
+
+.latest-news {
+    height: 400px;
+}
+
+#news-ticker {
+    height: 325px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.latest-news-item {
+    margin: 3px;
+    height: 100px;
+}
+
+.latest-thumbnail-image {
+    width: auto;
+    height: 100px;
+}
+
+.latest-thumbnail {
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    display: block;
+    margin-right: 5px;
 }

@@ -12,6 +12,24 @@
     {{ content }}
   </div>
   <div class="w3-container w3-col l4">
+    <div class="w3-card-2" style="margin-top:10px;">
+      <header class="w3-red w3-container">
+        <h2>সর্বশেষ পোস্ট</h2>
+      </header>
+      <div id="news-ticker">
+        {% for post in site.posts %}
+        <div class="w3-card-4 latest-news-item w3-display-container">
+          {% if post.img %}
+          <div class="latest-thumbnail w3-left"  style="z-index: 999;">
+            <img alt="" class="latest-thumbnail-image" src="{{ post.img }}"/>
+          </div>
+          {% endif %}
+          <h3 class="w3-right">{{ post.title }}</h3>
+          <div class="w3-container w3-light-blue w3-display-bottomright" style="width:100%; z-index: -1; text-align:right;">{{ post.date | date: "%d %b %Y"}}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
   </div>
 <!-- Footer -->
 {% include footer.html %}
@@ -27,6 +45,60 @@ function myFunction() {
     }
 }
 </script>
+<script>
+       $(function() {
+         
+         //cache the ticker
+         var ticker = $("#news-ticker");
+         
+         //wrap dt:dd pairs in divs
+         
+         
+         //hide the scrollbar
+         ticker.css("overflow", "hidden");
+         
+         //animator function
+         function animator(currentItem) {
+           
+           //work out new anim duration
+           var distance = currentItem.height(),
+               duration = (distance - Math.abs(parseInt(currentItem.css("marginTop")))) / 0.025;
+           
+           //animate the first child of the ticker
+           currentItem.animate({ marginTop: -distance }, duration, "linear", function() {
+             
+             
+             //move current item to the bottom
+             currentItem.appendTo(currentItem.parent()).css("marginTop", 0);
+             
+             //recurse
+             animator(currentItem.parent().children(":first"));
+             console.log(currentItem.parent().children(":first"));
+           }); 
+         };
+         
+         //start the ticker
+         animator(ticker.children(":first"));
+       });
 
+       $(document).ready(function () {  
+         var top = $('#main-menu').offset().top - parseFloat($('#main-menu').css('marginTop').replace(/auto/, 100));
+         $(window).scroll(function (event) {
+           // what the y position of the scroll is
+           var y = $(this).scrollTop();
+
+           // whether that's below the form
+           if (y >= top) {
+             // if so, ad the fixed class
+             $('#main-menu').addClass('fixed');
+             $('#to-top').show();
+           } else {
+             // otherwise remove it
+             $('#main-menu').removeClass('fixed');
+             $('#to-top').hide();
+           }
+         });
+       });
+      </script>
 </body>
 </html>
